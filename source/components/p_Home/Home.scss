@@ -1,0 +1,31 @@
+@import "../../styles/branding.scss";
+
+.hw_home {
+    &__button {
+        display: block;
+        position: relative;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    &__teaserimg {
+        height: 300px;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+    &__teasersections {
+        gap: 40px;
+        justify-content: center;
+    }
+    &__teasersection {
+        width: calc(50% - 80px);
+    }
+
+    @media only screen and (max-width: 744px) {
+        .hw_home__teasersections {
+            flex-direction: column;
+        }
+        .hw_home__teasersection {
+            width: 100% !important;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.hw_guides {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__guide {
+        cursor: pointer;
+        padding: 60px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 20px;
+
+        .hw_section, h1, h2, h3, p {
+            color: white;
+        }
+
+        &#code {
+            border-color: rgb(150, 218, 86);
+            background-color: rgb(150, 218, 86);
+        }
+
+        &#website {
+            border-color: rgb(240, 163, 91);
+            background-color: rgb(240, 163, 91);
+        }
+
+        &#discord {
+            border-color: rgb(127, 172, 255);
+            background-color: rgb(127, 172, 255);
+        }
+
+        &#twitch {
+            border-color: rgb(170, 85, 250);
+            background-color: rgb(170, 85, 250);
+        }
+
+        &#youtube {
+            border-color: rgb(250, 85, 85);
+            background-color: rgb(250, 85, 85);
+        }
+
+
+    
+    }
+
+    
+}

@@ -1,0 +1,126 @@
+@import "../../styles/branding.scss";
+
+.hw_page {
+    position: relative;
+    background-color: #ffffff;
+    width: calc(100%);
+
+    background-color: #ffffff;
+    &--dark {
+        background-color: #383838;
+    }
+
+    .hw_heading {
+        &--dark {
+            color: $color-primary-light;
+        }
+    }
+    
+    .hw_paragraph {
+        &--dark {
+            color: $color-primary-light;
+        }
+    }
+    
+    .hw_hashlink {
+        &--dark, &--light {
+            color: $color-secondary !important;
+        }
+    }
+    
+    .hw_list {
+        &--dark, &--light {
+            ::marker { color: $color-secondary; }
+        }
+    }
+
+    .hw_header {
+        .hw_navlink {
+            &--active {
+                color: $color-secondary !important;
+                svg { border-color: $color-secondary !important;}
+                .hw_svgicon__fill { fill: $color-secondary !important;}
+            }
+        }
+        &--dark {
+            background-color: $color-primary-dark;
+            color: $color-primary-light;
+            svg { border-color: $color-primary-light !important;}
+            .hw_svgicon__fill { fill: $color-primary-light !important;}
+            .hw_navlink { 
+                color: $color-primary-light;
+            }
+        }
+    }
+    /* Absolute Top Navigation Menu */
+    @media only screen and (max-width: 550px) {
+        .hw_header .hw_navigation {
+            bottom: -40px;
+            justify-content: center;
+            left: 0;
+            position: absolute;
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 550px) {
+        .hw_main {
+            min-height: calc(100vh - 140px);
+            padding: 40px 20px 20px;
+        }
+    }
+
+    .hw_logo {
+        &--dark span {
+            color: $color-primary-light;
+        }
+        &__secondary {
+            color: $color-secondary !important;
+        }
+        .hw_image {
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+.hw_route {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding-bottom: 65px;
+    padding-top: 20px;
+}
+
+.hw_footer {
+    height: 160px;
+    width: calc(100% - 40px);
+    z-index: 1;
+    &__top, &__backtotop, &__content {
+        position: relative;
+        z-index: 1;
+    }
+    &::before {
+        filter: blur(1px);
+        position: absolute;
+        display: block;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        content: " ";
+        z-index: 0;
+        background-image: url("/public/images/boycreative.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: local;
+        background-position-y: center;
+    }
+}
+
+.niteswitch {
+    position: absolute;
+    top: 18px;
+    right: 5px;
+    z-index: 2;
+    transform: scale(0.8);
+}

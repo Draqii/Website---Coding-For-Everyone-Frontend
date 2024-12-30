@@ -1,0 +1,51 @@
+@import "../../styles/branding.scss";
+
+.hw_contact {
+    &__split {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    &__image {
+        width: 80px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    &__imagelarge {
+        width: 100%;
+        border-radius: 20px;
+        filter: drop-shadow(16px 16px 20px rgb(0, 0, 0));
+        max-width: 1000px;
+        margin-left: -40px;
+        @media only screen and (min-width: 460px) {
+            margin-left: -80px;
+        }
+        @media only screen and (min-width: 744px) {
+            width: 50%;
+            max-width: 520px;
+        }
+    }
+    &__imagesection {
+        @media only screen and (min-width: 744px) {
+            flex-direction: row;
+            .hw_contact__innerimagesection {
+                width: 50%;
+            }
+        }
+    }
+    &__detail {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .hw_icon {
+        cursor: default;
+    }
+    .hw_svgicon__fill {
+        fill: $color-primary-dark;
+    }
+    .hw_svgicon__stroke {
+        stroke: $color-primary-dark;
+    }
+}
